@@ -2,32 +2,32 @@
   <h2>Enter Employee Details</h2><br>
   <form #form="ngForm" ngSubmit="onSubmit()" ngNativeValidate >
     <div class="form-group">
-      <label for="fname">First Name:</label><br>
-      <input id="fname" name="firstname" class="form-control" [(ngModel)]="employee.firstname" required><br><br>
+      <label id="ukd" for="fname">First Name:</label><br>
+      <input type="text" id="fname" name="firstname" class="form-control" [(ngModel)]="employee.firstname" required><br><br>
 
-      <label for="lname">Last Name:</label><br>
-      <input id="lname" name="lastname" class="form-control" [(ngModel)]="employee.lastname" required><br><br>
+      <label id="ukd" for="lname">Last Name:</label><br>
+      <input type="text" id="lname" name="lastname" class="form-control" [(ngModel)]="employee.lastname" required><br><br>
 
-      <label for="email">Email-ID:</label><br>
+      <label id="ukd" for="email">Email-ID:</label><br>
       <input type="email" id="email" name="emailAddress" class="form-control" [(ngModel)]="employee.emailAddress" required><br><br>
 
 
-      <label for="contact">Contact Number:</label><br>
-      <input id="contact" name="contact" class="form-control" [(ngModel)]="employee.contact" required><br><br>
+      <label id="ukd" for="contact">Contact Number:</label><br>
+      <input type="number" id="contact" name="contact" class="form-control" [(ngModel)]="employee.contact" required><br><br>
 
-      <label for="add">Address:</label><br>
+      <label id="ukd" for="add">Address:</label><br>
       <textarea id="address" name="address" class="form-control"   rows="7" cols="23" [(ngModel)]="employee.address" required>
         </textarea><br><br>
 
-        <label for="username">Username: </label><br>
-      <input id="username" name="username" class="form-control" [(ngModel)]="employee.username" required><br><br>
+        <label id="ukd" for="username">Username: </label><br>
+      <input type="text" id="username" name="username" class="form-control" [(ngModel)]="employee.username" required><br><br>
 
-      <label for="pwd">Password </label><br>
+      <label id="ukd" for="pwd">Password </label><br>
       <input id="pwd" name="userpwd" class="form-control" type="password" [(ngModel)]="employee.userpwd" required><br><br>
 
 
 
-     <label for="gender">Gender</label><br>
+     <label id="ukd" for="gender">Gender</label><br>
 <div class="form-group"  required>
   <div class="form-check form-check-inline">
     <input class="form-check-input" type="radio" name="gender" id="RadioBtn1" value="male" [(ngModel)]="employee.gender">
@@ -52,7 +52,7 @@
 
 
       <div class="form-group">
-        <label for="qualification">Qualification</label>
+        <label id="ukd" for="qualification">Qualification</label>
         <select class="form-control" id="qualification" name="qualification" [(ngModel)]="employee.qualification" >
 
          <option *ngFor="let type of qualification | async">
@@ -63,7 +63,7 @@
       <br>
 
       <div class="form-group">
-        <label for="experience">Experience</label>
+        <label id="ukd" for="experience">Experience</label>
         <select class="form-control" id="experience" name="experience" [(ngModel)]="employee.experience">
           <option *ngFor="let type of experience | async">
             {{type}}
@@ -74,7 +74,7 @@
 <br>
 
 
-<label id="cboxlbl">Coding Language</label><br>
+<label id="ukd" id="cboxlbl">Coding Language</label><br>
             <div id="Clanguages" name="Clanguages" *ngFor="let language of languages">
               <input type="checkbox" name={{language}} id={{language}} ngModel ng-model-true-value="yes">
               <label for={{language}} ng>{{language}}</label>
@@ -86,7 +86,7 @@
 
 
   </div>
-      <button type="submit" name="submit" class="btn btn-primary" (click)="onSubmit(form)">Submit</button>
+      <button id="ukd" type="submit" name="submit" class="btn btn-primary" (click)="onSubmit(form)">Submit</button>
   </form>
 
   </div>
